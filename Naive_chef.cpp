@@ -21,8 +21,8 @@ int main() {
 	         if (b == arr[i])
 	         countb++;
 	    }
-	    proba = counta/n;
-	    probb = countb/n;
+	    proba = static_cast<float>(counta) / n;
+            probb = static_cast<float>(countb) / n;
 	    ans = (proba * probb);
 	    cout<<ans<<endl;
 	}
