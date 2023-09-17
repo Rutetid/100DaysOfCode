@@ -10,7 +10,7 @@ int main()
     reversed += word[i];
 
   if(word == reversed)
-    cout<<"YES";
+    cout << "YES";
   else cout<<"NO";
   return 0;
 }
