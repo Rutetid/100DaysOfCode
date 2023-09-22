@@ -5,7 +5,8 @@ int main()
 {
     int t,x,y;
     cin>>t;
-    while(t--){
+    while(t--)
+    {
         cin>>x>>y;
         
         if((x+y)>6) cout<<"yes"<<endl;
