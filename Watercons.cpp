@@ -7,7 +7,8 @@ int main()
 	int t,water;
 	cin>>t;
 	
-	while(t--){
+	while(t--)
+	{
 	    cin>>water;
 	    if (water>=2000) cout<<"yes"<<endl;
 	    else cout<<"no"<<endl;
