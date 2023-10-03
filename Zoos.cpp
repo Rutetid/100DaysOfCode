@@ -5,7 +5,7 @@ int main()
   string word;
   int zcount = 0;
   int ycount = 0;
-  cin >>word;
+  cin >> word;
   int size = word.length();
 
   for(int i=0;i<size;i++){
