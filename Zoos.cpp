@@ -16,7 +16,7 @@ int main()
   }
 
     if(ycount == (zcount*2)){
-        cout << "Yes";
+        cout<< "Yes";
     }
     else
         cout << "No";
