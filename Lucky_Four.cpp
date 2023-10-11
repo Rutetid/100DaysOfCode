@@ -7,7 +7,7 @@ int main() {
     cin>>T;
     while(T--){
         int count= 0;
-        cin>>number;
+        cin>> number;
         int size;
         size = number.size();
         for(int i=0;i<size;i++){
