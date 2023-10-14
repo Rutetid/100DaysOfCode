@@ -13,7 +13,6 @@ int main() {
         for(int i=0;i<size;i++){
             if(number[i]=='4')
             count++;
-            
         }
         cout<<count<<endl; 
         
