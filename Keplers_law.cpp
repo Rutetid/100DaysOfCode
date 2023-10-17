@@ -17,7 +17,7 @@ int main()
         k = A*D;
         p = B*C;
         if(k==p) cout<<"yes"<<endl;
-        else cout<<"no"<<endl;
+        else cout <<"no"<<endl;
         }
 	return 0;
 }
