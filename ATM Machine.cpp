@@ -11,7 +11,8 @@ int main() {
 	    vector<int> g;
 	    cin>>n>>k;
 	    int arr[n];
-	    for(int i = 0;i<n;i++){
+	    for(int i = 0;i<n;i++)
+	    {
 	        cin>>arr[i];
 	    }
 	    for(int i =0;i<n;i++){
