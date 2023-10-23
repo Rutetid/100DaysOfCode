@@ -6,7 +6,8 @@ int main() {
 	// your code goes here
 	int t,k,n;
 	cin>>t;
-	while(t--){
+	while(t--)
+	{
 	    int number = 0;
 	    vector<int> g;
 	    cin>>n>>k;
