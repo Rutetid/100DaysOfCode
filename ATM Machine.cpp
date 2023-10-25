@@ -20,7 +20,7 @@ int main() {
 	        if (arr[i]<=k){
 	            number = 1;
 	            g.push_back(number);
-	            k = k- arr[i];
+	            k = k - arr[i];
 	        }
 	        else g.push_back(0);
 	    }
