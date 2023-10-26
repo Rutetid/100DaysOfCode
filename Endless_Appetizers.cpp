@@ -6,7 +6,8 @@ int main() {
     cin>>T;
     while(T--){
         cin>>X>>Y>>R;
-        if(R>0){
+        if(R>0)
+	{
             sticks = (R/30)+X;
         }
         else sticks = X;
