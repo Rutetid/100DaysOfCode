@@ -4,7 +4,8 @@ using namespace std;
 int main() {
     int T,X,Y,R,plates,sticks;
     cin>>T;
-    while(T--){
+    while(T--)
+    {
         cin>>X>>Y>>R;
         if(R>0)
 	{
