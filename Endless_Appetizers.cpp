@@ -13,8 +13,7 @@ int main() {
         }
         else sticks = X;
         
-        if(sticks%Y ==0)
-	{
+        if(sticks%Y ==0){
             plates = (sticks/Y);
         }
         else if(sticks%Y !=0)
