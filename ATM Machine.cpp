@@ -24,7 +24,8 @@ int main() {
 	        }
 	        else g.push_back(0);
 	    }
-	    for(int i = 0;i<n;i++){
+	    for(int i = 0;i<n;i++)
+	    {
 	        cout<<g[i];
 	    }
 	    cout<<endl;
