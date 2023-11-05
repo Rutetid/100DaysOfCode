@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main() {
@@ -9,20 +10,23 @@ int main() {
 	    int x,y;
 	    int count = 0;
 	    cin>>x>>y;
-	    int arr[x];
+	    vector<int> vec;
 	    for(int i=0;i<x;i++){
-	        cin>>arr [i];
+	        int temp;
+	        cin>>temp;
+	        vec.push_back(temp);
 	    }
 	    
-	    for(int i=0;i<x-y;i++){
-           for(int j=i;j<=y;j++){
-               if (arr[j]%2 == 1){
+	    for(int i=0;i<=x-y;i++){
+           for(int j=i;j<i+y;j++){
+               if (vec[j]%2 == 1){
                    count++;
                    break;
                }
            }
 	    }
 	    cout<<count<<endl;
+	
 	}
 	    
 	return 0;
