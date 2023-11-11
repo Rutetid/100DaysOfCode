@@ -5,7 +5,8 @@ int main()
 {
 	int c,n,r;
 	cin>>c;
-	while (c--){
+	while (c--)
+	{
 	    cin>>n>>r;
 	    if (n%2 ==0)
 	    cout<<"yes"<<endl;
