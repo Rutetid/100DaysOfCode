@@ -2,7 +2,7 @@
 *.o
 *.out
 *.exe
-.code-workspace
+*.code-workspace
 
 #Directories
 
