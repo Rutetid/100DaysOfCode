@@ -3,6 +3,7 @@
 *.out
 *.exe
 *.code-workspace
+*.prob
 
 #Directories
 
