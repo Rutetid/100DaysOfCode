@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main() 
-{
+int main() {
 	int t,n,a,b;
 	float proba,probb,ans;
 	cin>>t;
