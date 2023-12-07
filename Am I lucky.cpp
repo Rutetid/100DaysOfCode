@@ -5,7 +5,7 @@ int main() {
     int t;
     cin >> t;
     while(t--) {
-        // Your code here
+        // Your code here 
         int all,boys,g,girls;
         cin>>all>>boys>>g;
         girls = all - boys;
