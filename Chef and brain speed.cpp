@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
 	// your code goes here 
-	int x,y
+	int x,y;
 	cin>>x,y;
 	if(y>x) cout<<"yes";
 	else cout<<"no";
