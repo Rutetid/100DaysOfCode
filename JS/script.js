@@ -44,28 +44,53 @@
   const app = express();
   const port = 3000;
   app.use(bodyParser.json());
-
   let allEntries = [];
-  let idCounter = 1;
-  app.post('/todos', (req, res) => {
 
-    const input = req.body;
+  function findIndex(allEntries, id){
+    for(let i = 0; i < allEntries.length ; i++){
+      if (allEntries[i] === id) return i;
+    }
+    return -1;
+  }
+
+  function removeAtIndex(allEntries, index){
+    let newArray = [];
+    for(let i = 0 ; i < allEntries.length ; i++){
+      if( i != index) newArray.push(allEntries[i])
+    }
+  return newArray;
+  }
+
+  app.get(-'/todos', (req, res) => {
+    res.status(200).json(allEntries);
+  })
+  
+  app.post('/todos', (req, res) => {
     let newElement = {
         id: Math.floor(Math.random() * 1000000),
         title : req.body.title ,
         completed : req.body.completed
     }    
-    
     allEntries.push(newElement);
     res.status(201).json(newElement);
   })
 
-  app.get('/todos', (req, res) => {
+  app.delete('/todos:id' , (req , res) =>{
+    const todoIndex = findIndex(allEntries , parseInt(req.params.id));
+    if(todoIndex === -1) {
+      res.status(404).send();
+    }
 
-    res.status(200).json(allEntries);
-  
+    else {
+      allEntries = removeAtIndex(allEntries , todoIndex);
+      res.status(200).send();
+    } 
   })
-  
+  app.get('/todos:id', (req, res) => {  
+  })
+
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
   })
+
+  
