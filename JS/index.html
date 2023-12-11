@@ -7,31 +7,61 @@
     <title>Todo List</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <script>
+    function getData(){
+        fetch("http://localhost:3000/todos" , {
+            method: "GET"
+        }).then(getCallback)
 
-    function parsedResponse(data){
-        console.log(data);
+        function getCallback(resp){
+            resp.json().then(parsedData)
+        }
+
+        function parsedData(data){
+            var parentElement = document.getElementById("mainArea");
+          //  parentElement.innerHTML = JSON.stringify(data);
+          var childElement = document.getElementById("mainArea");
+          childElement.innerHTML = "something";
+          parentElement.appendChild(childElement)
+            console.log(data)
+        }
     }
 
-    function callback(resp){
-        resp.json().then(parsedResponse)
-    }
+    getData();
 
    function OnPress(){
-    
+    function parsedResponse(data){
+        console.log(data);
+    } function postCallback(resp){
+        resp.json().then(parsedResponse)
+    }
+    var title  = document.getElementById("title").value;
+    var description = document.getElementById("description").value;
+
     fetch("http://localhost:3000/todos", {
-        method: "GET"
-    }).then(callback)
+        method: "POST",
+        body : JSON.stringify({
+            title : title ,
+            description : description
+        }), 
+        headers: {
+            "Content-Type" : "application/json"
+        }
+    }).then(postCallback)
    }
 </script>
+
 <body>
     <div class="overlay"></div>
     <div class="todo-container">
         <h1>Todo List</h1>
-        <input type="text" class="input-box" placeholder="Title">
-        <input type="text" class="input-box" placeholder="Description">
+        <input type="text" class="input-box" placeholder="Title" id = "title">
+        <input type="text" class="input-box" placeholder="Description" id = "description">
         <button class="submit-button" onclick="OnPress()">Add Todo</button>
     </div>
+
+    <div id = "mainArea"></div>
 </body>
 
 </html>
